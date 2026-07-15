@@ -76,43 +76,22 @@
 
         <form class="formcard__body" id="inquiryForm" novalidate>
 
-          <fieldset class="fgroup">
-            <legend><span class="fgroup__num">1</span> Your Contact Details</legend>
-
+          <div class="fgrid">
             <div class="field">
-              <label for="fullname">Full Name</label>
-              <input id="fullname" type="text" placeholder="Enter your full name" />
+              <input id="fullname" type="text" aria-label="Full name" placeholder="Your Name *" required />
             </div>
-
             <div class="field">
-              <label for="email">Email <span class="req">*</span></label>
-              <div class="input-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-                <input id="email" type="email" required placeholder="gokayaking@email.com" />
-              </div>
+              <input id="email" type="email" aria-label="Email" placeholder="Email Address *" required />
             </div>
-
             <div class="field">
-              <label for="phone">Phone Number <span class="req">*</span></label>
-              <div class="input-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3l3 5-2 2c1 3 3 5 6 6l2-2 5 3-2 4c-9 0-16-7-16-16z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-                <input id="phone" type="tel" required placeholder="+1 (555) 000-0000" />
-              </div>
+              <input id="phone" type="tel" aria-label="Phone number" placeholder="Phone Number *" required />
             </div>
-
             <div class="field">
-              <label for="org">Company / Group / Organization Name</label>
-              <input id="org" type="text" placeholder="Enter your text" />
+              <input id="org" type="text" aria-label="Organization" placeholder="Company / Group Name" />
             </div>
-          </fieldset>
-
-          <fieldset class="fgroup">
-            <legend><span class="fgroup__num">2</span> Event Details</legend>
-
             <div class="field">
-              <label for="occasion">What's the Occasion?</label>
-              <select id="occasion">
-                <option value="" disabled selected>Choose one or more options</option>
+              <select id="occasion" aria-label="Occasion" required>
+                <option value="" disabled selected>What's the Occasion? *</option>
                 <option>Team Building</option>
                 <option>Staff Retreat</option>
                 <option>Club Outing</option>
@@ -121,21 +100,12 @@
                 <option>Other</option>
               </select>
             </div>
-
             <div class="field">
-              <label for="participants">Total Number of Participants</label>
-              <input id="participants" type="number" min="1" placeholder="Enter your text" />
+              <input id="participants" type="number" min="1" aria-label="Number of participants" placeholder="No. of Participants" />
             </div>
-
             <div class="field">
-              <label for="children">Bringing children under 16? If yes, provide number and ages</label>
-              <input id="children" type="text" placeholder="If yes, please provide the number and ages" />
-            </div>
-
-            <div class="field">
-              <label for="program">Which Program(s) Are You Interested In?</label>
-              <select id="program">
-                <option value="" disabled selected>Choose one or more options</option>
+              <select id="program" aria-label="Program" required>
+                <option value="" disabled selected>Choose a Program *</option>
                 <option>Guided Kayak Tour</option>
                 <option>Stand-Up Paddleboard</option>
                 <option>Canoe Program</option>
@@ -143,55 +113,19 @@
                 <option>Custom / Leadership</option>
               </select>
             </div>
-          </fieldset>
-
-          <fieldset class="fgroup">
-            <legend><span class="fgroup__num">3</span> Timing &amp; Logistics</legend>
-
             <div class="field">
-              <label for="dates">Preferred Date(s)</label>
-              <input id="dates" type="text" placeholder="(1–3 options recommended)" />
+              <input id="dates" type="text" aria-label="Preferred dates" placeholder="Preferred Date(s)" />
             </div>
-
-            <div class="field">
-              <span class="label">Is Your Date Flexible?</span>
-              <div class="radio-row">
-                <label class="radio"><input type="radio" name="flex" /><span></span>Yes</label>
-                <label class="radio"><input type="radio" name="flex" /><span></span>No</label>
-              </div>
+            <div class="field field--full">
+              <textarea id="notes" rows="3" aria-label="Message" placeholder="Anything else we should know? (group size, timing, requests…)"></textarea>
             </div>
-
-            <div class="field">
-              <label for="starttime">Preferred Start Time &amp; Duration</label>
-              <input id="starttime" type="text" placeholder="Enter your text" />
-            </div>
-
-            <div class="field">
-              <label for="arrive">How Will Your Group Arrive in Deep Cove?</label>
-              <select id="arrive">
-                <option value="" disabled selected>Choose one or more options</option>
-                <option>Personal Vehicles</option>
-                <option>Carpool</option>
-                <option>Chartered Bus / Coach</option>
-                <option>Public Transit</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="notes">Is There Anything Else We Should Know?</label>
-              <textarea id="notes" rows="3" placeholder="Type your message here"></textarea>
-            </div>
-          </fieldset>
-
-          <div class="field consent">
-            <span class="label">I agree to be contacted by Deep Cove Kayak regarding my inquiry by phone, email, or text message <span class="req">*</span></span>
-            <label class="radio"><input type="radio" name="consent" required /><span></span>Yes</label>
           </div>
 
-          <div class="field">
-            <label for="staff">Optional: If you work for Deep Cove Kayak and filled this out for a guest — provide details</label>
-            <textarea id="staff" rows="2" placeholder="Staff name + notes"></textarea>
-          </div>
+          <label class="consent-check">
+            <input type="checkbox" name="consent" required />
+            <span class="consent-check__box"></span>
+            <span>I agree to be contacted by Deep Cove Kayak by phone, email, or text. <span class="req">*</span></span>
+          </label>
 
           <button type="submit" class="btn btn--teal formcard__submit">
             <span class="btn__label">Submit Inquiry</span>

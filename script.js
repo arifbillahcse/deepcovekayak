@@ -57,7 +57,7 @@
       if (!email.value || !phone.value || !consent.checked) {
         var bad = !email.value ? email : (!phone.value ? phone : consent);
         bad.focus();
-        (bad.closest(".field") || bad).scrollIntoView({ behavior: "smooth", block: "center" });
+        (bad.closest(".field") || bad.closest(".consent-check") || bad).scrollIntoView({ behavior: "smooth", block: "center" });
         return;
       }
       var btn = form.querySelector(".formcard__submit");
