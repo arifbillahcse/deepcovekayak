@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deep Cove Kayak — Team Building & Group Programs</title>
+<meta name="description" content="Bring your group together on the water. Team building, staff retreats, club outings and social paddling programs with Deep Cove Kayak." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
+    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=2000&q=80');"></div>
+    <div class="hero__overlay"></div>
+
+    <!-- floating animated blobs -->
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+
+    <div class="hero__inner">
+      <div class="hero__content">
+        <a class="brand" href="#top" aria-label="Deep Cove Kayak home">
+          <svg class="brand__mark" viewBox="0 0 64 64" width="58" height="58" aria-hidden="true">
+            <path class="paddler" d="M8 44c10-6 20-6 30-2 8 3 14 2 18-2" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+            <circle cx="34" cy="24" r="5.5" fill="#fff"/>
+            <path d="M30 30c-4 3-3 9 4 9s8-6 4-9" fill="#fff"/>
+            <path class="oar" d="M18 20l28 18" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span class="brand__name">Deep&nbsp;Cove<br/><em>Kayak</em></span>
+        </a>
+
+        <h1 class="hero__title">
+          <span class="reveal-up" style="--d:.05s">BRING YOUR</span>
+          <span class="reveal-up hero__accent" style="--d:.18s">GROUP TOGETHER</span>
+          <span class="reveal-up" style="--d:.31s">ON THE WATER.</span>
+        </h1>
+
+        <p class="hero__lead reveal-up" style="--d:.44s">
+          Our group programs are designed to bring people together through shared outdoor
+          experiences. Whether you're planning a team-building event, a staff retreat, a club
+          outing, or a social gathering, our paddling programs offer a fun, active, and
+          memorable way to connect outside the office.
+        </p>
+
+        <div class="hero__trust reveal-up" style="--d:.57s">
+          <div class="avatars">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="" />
+          </div>
+          <div class="hero__trust-text">
+            <span class="stars">★★★★★</span>
+            <strong><span class="count" data-target="23700">0</span>+ Group Participants Trust Us</strong>
+          </div>
+        </div>
+
+        <a href="#form" class="btn btn--amber hero__cta reveal-up" style="--d:.7s">
+          Start Your Inquiry
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- ============ FORM CARD ============ -->
+      <aside class="formcard" id="form">
+        <div class="formcard__header">
+          <h2>Team Building &amp; Group Programs</h2>
+          <p>Tell us about your group — we reply within 3 business days.</p>
+        </div>
+
+        <form class="formcard__body" id="inquiryForm" novalidate>
+
+          <fieldset class="fgroup">
+            <legend><span class="fgroup__num">1</span> Your Contact Details</legend>
+
+            <div class="field">
+              <label for="fullname">Full Name</label>
+              <input id="fullname" type="text" placeholder="Enter your full name" />
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <div class="input-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+                <input id="email" type="email" required placeholder="gokayaking@email.com" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <div class="input-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3l3 5-2 2c1 3 3 5 6 6l2-2 5 3-2 4c-9 0-16-7-16-16z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                <input id="phone" type="tel" required placeholder="+1 (555) 000-0000" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="org">Company / Group / Organization Name</label>
+              <input id="org" type="text" placeholder="Enter your text" />
+            </div>
+          </fieldset>
+
+          <fieldset class="fgroup">
+            <legend><span class="fgroup__num">2</span> Event Details</legend>
+
+            <div class="field">
+              <label for="occasion">What's the Occasion?</label>
+              <select id="occasion">
+                <option value="" disabled selected>Choose one or more options</option>
+                <option>Team Building</option>
+                <option>Staff Retreat</option>
+                <option>Club Outing</option>
+                <option>Birthday / Social</option>
+                <option>School / Youth Group</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="participants">Total Number of Participants</label>
+              <input id="participants" type="number" min="1" placeholder="Enter your text" />
+            </div>
+
+            <div class="field">
+              <label for="children">Bringing children under 16? If yes, provide number and ages</label>
+              <input id="children" type="text" placeholder="If yes, please provide the number and ages" />
+            </div>
+
+            <div class="field">
+              <label for="program">Which Program(s) Are You Interested In?</label>
+              <select id="program">
+                <option value="" disabled selected>Choose one or more options</option>
+                <option>Guided Kayak Tour</option>
+                <option>Stand-Up Paddleboard</option>
+                <option>Canoe Program</option>
+                <option>Multi-Activity Day</option>
+                <option>Custom / Leadership</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="fgroup">
+            <legend><span class="fgroup__num">3</span> Timing &amp; Logistics</legend>
+
+            <div class="field">
+              <label for="dates">Preferred Date(s)</label>
+              <input id="dates" type="text" placeholder="(1–3 options recommended)" />
+            </div>
+
+            <div class="field">
+              <span class="label">Is Your Date Flexible?</span>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="flex" /><span></span>Yes</label>
+                <label class="radio"><input type="radio" name="flex" /><span></span>No</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="starttime">Preferred Start Time &amp; Duration</label>
+              <input id="starttime" type="text" placeholder="Enter your text" />
+            </div>
+
+            <div class="field">
+              <label for="arrive">How Will Your Group Arrive in Deep Cove?</label>
+              <select id="arrive">
+                <option value="" disabled selected>Choose one or more options</option>
+                <option>Personal Vehicles</option>
+                <option>Carpool</option>
+                <option>Chartered Bus / Coach</option>
+                <option>Public Transit</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">Is There Anything Else We Should Know?</label>
+              <textarea id="notes" rows="3" placeholder="Type your message here"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="field consent">
+            <span class="label">I agree to be contacted by Deep Cove Kayak regarding my inquiry by phone, email, or text message <span class="req">*</span></span>
+            <label class="radio"><input type="radio" name="consent" required /><span></span>Yes</label>
+          </div>
+
+          <div class="field">
+            <label for="staff">Optional: If you work for Deep Cove Kayak and filled this out for a guest — provide details</label>
+            <textarea id="staff" rows="2" placeholder="Staff name + notes"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--teal formcard__submit">
+            <span class="btn__label">Submit Inquiry</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+          </button>
+          <p class="formcard__legal"><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
+        </form>
+
+        <!-- success state -->
+        <div class="formcard__success" id="formSuccess" hidden>
+          <div class="success-ring">
+            <svg viewBox="0 0 52 52" width="72" height="72" aria-hidden="true">
+              <circle class="sr-circle" cx="26" cy="26" r="24" fill="none" stroke-width="2.5"/>
+              <path class="sr-check" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" d="M14 27l8 8 16-18"/>
+            </svg>
+          </div>
+          <h3>Inquiry received!</h3>
+          <p>Thanks — our Group Bookings team will be in touch within 3 business days.</p>
+        </div>
+      </aside>
+    </div>
+
+    <a href="#book" class="scroll-hint" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </header>
+
+  <!-- ============ HOW TO BOOK ============ -->
+  <section class="section" id="book">
+    <div class="container">
+      <p class="eyebrow reveal">Simple &amp; Stress-Free</p>
+      <h2 class="section__title reveal">How to Book an Activity</h2>
+
+      <div class="steps">
+        <article class="step reveal" style="--d:.05s">
+          <div class="step__icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="dr" x="10" y="6" width="28" height="36" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="dr" d="M16 16h16M16 23h16M16 30h10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </div>
+          <span class="step__no">Step 1</span>
+          <h3>Submit an Inquiry</h3>
+          <p>Complete the form and include as much detail as you can — organization name, preferred date, group size, and what you hope to get out of the experience.</p>
+        </article>
+
+        <article class="step reveal" style="--d:.15s">
+          <div class="step__icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path class="dr" d="M8 12h32v20H8z" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="dr" d="M8 12l16 12 16-12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="step__no">Step 2</span>
+          <h3>Hear Back From Our Team</h3>
+          <p>Our Group Bookings team follows up within 3 business days with availability, pricing, and any clarifying questions.</p>
+        </article>
+
+        <article class="step reveal" style="--d:.25s">
+          <div class="step__icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="dr" x="7" y="14" width="34" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><circle class="dr" cx="24" cy="25" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="dr" d="M7 20h34" stroke="currentColor" stroke-width="2.4"/></svg>
+          </div>
+          <span class="step__no">Step 3</span>
+          <h3>Confirm With a Deposit</h3>
+          <p>To reserve your date, boats, and instructors, we require a 25% deposit — processed over the phone with our Group Bookings Office.</p>
+        </article>
+
+        <article class="step reveal" style="--d:.35s">
+          <div class="step__icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="dr" x="8" y="10" width="32" height="30" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="dr" d="M8 18h32M16 6v8M32 6v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path class="dr" d="M18 30l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="step__no">Step 4</span>
+          <h3>We Help You Plan the Dates</h3>
+          <p>Once confirmed, our team works directly with you on final numbers, waivers, timing, and arrival details.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S INCLUDED ============ -->
+  <section class="section section--tint">
+    <div class="container included">
+      <div class="included__media reveal">
+        <img src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?auto=format&fit=crop&w=1200&q=80" alt="Group of kayakers paddling together on calm water" loading="lazy" />
+        <div class="included__badge">
+          <span class="included__badge-num">100%</span>
+          <span>Gear provided</span>
+        </div>
+      </div>
+      <div class="included__body reveal" style="--d:.12s">
+        <p class="eyebrow">Everything Handled</p>
+        <h2 class="section__title">What's Included</h2>
+        <p class="section__lead">Every group program comes fully equipped so you can just show up and paddle.</p>
+        <ul class="ticklist">
+          <li>Kayak or paddleboard rental</li>
+          <li>Paddles &amp; PFDs (life jackets)</li>
+          <li>Full safety equipment</li>
+          <li>Wetsuits, if needed</li>
+          <li>Certified, friendly instructors</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POLICIES + NOTES ============ -->
+  <section class="section">
+    <div class="container two-col">
+      <div class="reveal">
+        <p class="eyebrow">Good to Know</p>
+        <h2 class="section__title">Group Policies</h2>
+        <ul class="policy">
+          <li><span class="policy__ic">%</span>A 25% deposit is required to confirm your booking.</li>
+          <li><span class="policy__ic">↩</span>Cancellations more than 2 weeks before your activity are eligible for a refund.</li>
+          <li><span class="policy__ic">⟳</span>Reschedule requests must be made at least 1 week before, subject to availability.</li>
+          <li><span class="policy__ic">✓</span>Final numbers and full payment are due 3 days before your activity.</li>
+        </ul>
+      </div>
+      <div class="reveal" style="--d:.12s">
+        <p class="eyebrow">Before You Go</p>
+        <h2 class="section__title">A Few Helpful Notes</h2>
+        <div class="note">
+          <p>This is an inquiry form — bookings are not confirmed until you've connected with our team and placed a deposit.</p>
+        </div>
+        <div class="note">
+          <p>Looking for something custom — longer programs, leadership development, or multi-activity experiences? Just let us know in your inquiry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHONE CTA ============ -->
+  <section class="phone-cta">
+    <div class="container">
+      <p class="phone-cta__eyebrow">Prefer to Inquire by Phone?</p>
+      <a href="tel:16049292268" class="phone-cta__num">
+        <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" class="ring-ic"><path d="M6 3l3 5-2 2c1 3 3 5 6 6l2-2 5 3-2 4c-9 0-16-7-16-16z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        604-929-2268 <span>Ext&nbsp;3</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <a class="brand brand--footer" href="#top">
+      <svg class="brand__mark" viewBox="0 0 64 64" width="46" height="46" aria-hidden="true">
+        <path d="M8 44c10-6 20-6 30-2 8 3 14 2 18-2" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+        <circle cx="34" cy="24" r="5.5" fill="#fff"/>
+        <path d="M30 30c-4 3-3 9 4 9s8-6 4-9" fill="#fff"/>
+        <path d="M18 20l28 18" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="brand__name">Deep Cove <em>Kayak</em></span>
+    </a>
+    <p>© 2026 — Deep Cove Canoe &amp; Kayak Centre Ltd — All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
