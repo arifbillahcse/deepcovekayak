@@ -111,21 +111,31 @@ a{color:inherit}
 /* ============ FORM CARD ============ */
 .formcard{background:#fff;border-radius:22px;box-shadow:var(--shadow);overflow:hidden;
   align-self:start;max-height:none}
-.formcard__header{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#fff;padding:26px 30px}
-.formcard__header h2{font-size:1.35rem;font-weight:800;text-transform:uppercase;letter-spacing:.3px}
-.formcard__header p{font-size:.9rem;opacity:.9;margin-top:4px;font-family:'Inter'}
-.formcard__body{padding:26px 30px 30px}
+.formcard__header{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#fff;padding:18px 28px}
+.formcard__header h2{font-size:1.2rem;font-weight:800;text-transform:uppercase;letter-spacing:.3px}
+.formcard__header p{font-size:.85rem;opacity:.9;margin-top:2px;font-family:'Inter'}
+.formcard__body{padding:20px 28px 24px}
 
 /* compact 2-column grid form */
-.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .field--full{grid-column:1 / -1}
+
+/* inline radio field (keeps same height as an input) */
+.field--radio{display:flex;align-items:center;gap:14px;padding:0 4px;
+  border:1.5px solid var(--line);border-radius:12px;background:#f9fbfb}
+.mini-label{font-size:.82rem;font-weight:600;color:var(--muted);padding-left:8px;white-space:nowrap}
+.radio{display:inline-flex;align-items:center;gap:6px;font-size:.88rem;font-weight:500;cursor:pointer}
+.radio input{position:absolute;opacity:0;width:0;height:0}
+.radio span{width:17px;height:17px;border:2px solid var(--line);border-radius:50%;position:relative;transition:border-color .2s}
+.radio input:checked+span{border-color:var(--teal)}
+.radio input:checked+span::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--teal)}
 
 .field{margin-bottom:0}
 .field label,.field .label{display:block;font-size:.86rem;font-weight:600;color:var(--ink);margin-bottom:6px}
 .req{color:#e0483d}
 .field input,.field select,.field textarea{
-  width:100%;font-family:'Inter';font-size:.95rem;color:var(--ink);
-  padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;background:#f9fbfb;
+  width:100%;font-family:'Inter';font-size:.9rem;color:var(--ink);
+  padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;background:#f9fbfb;
   transition:border-color .2s,box-shadow .2s,background .2s}
 .field textarea{resize:vertical}
 .field select{appearance:none;-webkit-appearance:none;cursor:pointer;
@@ -136,8 +146,8 @@ a{color:inherit}
 .field input::placeholder,.field textarea::placeholder{color:#9aa9ad}
 
 /* consent checkbox */
-.consent-check{display:flex;align-items:flex-start;gap:11px;font-size:.86rem;color:var(--muted);
-  cursor:pointer;margin:18px 0 4px;line-height:1.45}
+.consent-check{display:flex;align-items:flex-start;gap:11px;font-size:.82rem;color:var(--muted);
+  cursor:pointer;margin:12px 0 2px;line-height:1.4}
 .consent-check input{position:absolute;opacity:0;width:0;height:0}
 .consent-check__box{flex-shrink:0;width:20px;height:20px;border:2px solid var(--line);border-radius:6px;
   position:relative;transition:border-color .2s,background .2s;margin-top:1px}
@@ -146,7 +156,8 @@ a{color:inherit}
   width:5px;height:10px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
 .consent-check input:focus-visible+.consent-check__box{box-shadow:0 0 0 4px rgba(13,155,138,.18)}
 
-.formcard__submit{margin-top:14px}
+.formcard__submit{margin-top:10px;padding:13px 30px}
+.formcard__legal{margin-top:10px}
 .btn__spinner{display:none;width:18px;height:18px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .btn.loading .btn__label{opacity:0}
